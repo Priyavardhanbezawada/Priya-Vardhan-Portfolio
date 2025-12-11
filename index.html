@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The professional portfolio for Priya Vardhan Bezawada, an AI & Data Science Student, showcasing projects, skills, and certifications.">
     <meta name="keywords" content="Priya Vardhan Bezawada, Portfolio, AI, Data Science, Web Developer, Resume">
-    <title>Priya Vardhan Bezawada - // DATAFLOW INITIATED //</title>
+    <title>Priya Vardhan Bezawada - // NATURAL DATAFLOW //</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* SYNTHWAVE PALETTE */
+        /* EARTHY/COPPER PALETTE */
         :root {
-            --deep-dark: #120A1F; /* Black/Deep Violet */
-            --neon-cyan: #00FFFF;
-            --neon-pink: #FF69B4;
+            --deep-dark: #0A1B1A;    /* Dark Forest Green/Teal Background */
+            --primary-teal: #3A9D9A; /* Muted Teal Primary Highlight */
+            --accent-copper: #B87333; /* Copper/Bronze Accent */
             --light-text: #E5E7EB;
         }
         html { scroll-behavior: smooth; }
@@ -24,8 +24,8 @@
             overflow: hidden; /* Hide scrollbars initially */
         }
         .card {
-            /* Semi-transparent deep purple background */
-            background-color: rgba(30, 10, 50, 0.7);
+            /* Semi-transparent forest green background */
+            background-color: rgba(10, 27, 26, 0.7);
             border: 1px solid #334155;
             transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out;
             position: relative;
@@ -33,9 +33,9 @@
         }
         .card:hover {
             transform: translateY(-5px) scale(1.02);
-            border-color: var(--neon-cyan);
-            /* Double glow effect */
-            box-shadow: 0 0 10px var(--neon-cyan), 0 0 30px var(--neon-pink);
+            border-color: var(--primary-teal);
+            /* Copper and Teal glow effect */
+            box-shadow: 0 0 10px var(--primary-teal), 0 0 30px var(--accent-copper);
         }
         
         /* Modal styles */
@@ -50,7 +50,7 @@
         }
         /* Style for the idea detail modal */
         .idea-modal-content {
-            background-color: #1a0f30; /* Darker purple for modal */
+            background-color: #142A29; /* Slightly lighter dark green for modal */
             color: var(--light-text);
             padding: 2rem;
             border-radius: 0.5rem;
@@ -60,7 +60,7 @@
         }
         .modal.active .modal-content { transform: scale(1); }
         .close-modal {
-            position: absolute; top: 15px; right: 35px; color: var(--neon-pink);
+            position: absolute; top: 15px; right: 35px; color: var(--accent-copper);
             font-size: 40px; font-weight: bold; transition: 0.3s;
             cursor: pointer;
         }
@@ -70,36 +70,36 @@
         #landing-page { transition: opacity 0.8s ease-in-out; }
         .typing-cursor {
             display: inline-block; width: 3px; height: 1em;
-            background-color: var(--neon-cyan); 
-            animation: blink 0.7s infinite, glow-cyan 0.7s infinite alternate;
+            background-color: var(--primary-teal); 
+            animation: blink 0.7s infinite, glow-teal 0.7s infinite alternate;
         }
         @keyframes blink { 50% { opacity: 0; } }
-        @keyframes glow-cyan {
-            from { text-shadow: 0 0 5px var(--neon-cyan); }
-            to { text-shadow: 0 0 10px var(--neon-cyan), 0 0 15px var(--neon-pink); }
+        @keyframes glow-teal {
+            from { text-shadow: 0 0 5px var(--primary-teal); }
+            to { text-shadow: 0 0 10px var(--primary-teal), 0 0 15px var(--accent-copper); }
         }
 
         #explore-btn {
-            background-color: var(--neon-pink);
-            box-shadow: 0 0 5px var(--neon-pink), 0 0 25px var(--neon-pink);
+            background-color: var(--accent-copper);
+            box-shadow: 0 0 5px var(--accent-copper), 0 0 25px var(--accent-copper);
         }
         #explore-btn:hover {
-            background-color: var(--neon-cyan);
-            box-shadow: 0 0 5px var(--neon-cyan), 0 0 25px var(--neon-cyan), 0 0 50px var(--neon-pink);
+            background-color: var(--primary-teal);
+            box-shadow: 0 0 5px var(--primary-teal), 0 0 25px var(--primary-teal), 0 0 50px var(--accent-copper);
         }
-        .text-neon-cyan { color: var(--neon-cyan); }
-        .text-neon-pink { color: var(--neon-pink); }
-        .border-neon-cyan { border-color: var(--neon-cyan); }
+        .text-primary-teal { color: var(--primary-teal); }
+        .text-accent-copper { color: var(--accent-copper); }
+        .border-primary-teal { border-color: var(--primary-teal); }
     </style>
 </head>
-<body class="bg-gradient-to-br from-[#120A1F] to-[#301934] text-white">
+<body class="bg-gradient-to-br from-[#0A1B1A] to-[#142A29] text-white">
 
     <div id="landing-page" class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-deep-dark">
         <canvas id="landing-canvas" class="absolute inset-0 w-full h-full"></canvas>
         <div class="text-center z-10">
-            <h1 id="typing-text" class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-neon-cyan" style="text-shadow: 0 0 5px var(--neon-cyan);"></h1>
+            <h1 id="typing-text" class="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-8 text-primary-teal" style="text-shadow: 0 0 5px var(--primary-teal);"></h1>
             <button id="explore-btn" class="text-deep-dark font-bold py-3 px-8 rounded-full text-lg transition-all duration-300 transform hover:scale-110 opacity-0">
-                // ACCESS PORTFOLIO //
+                // ENTER SANCTUARY //
             </button>
         </div>
     </div>
@@ -107,14 +107,14 @@
     <main id="portfolio-page" class="hidden">
         <div class="container mx-auto max-w-3xl flex flex-col items-center p-4 pt-16">
             <header class="text-center mb-12 w-full">
-                <img class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-neon-cyan shadow-xl" src="https://placehold.co/128x128/120A1F/00FFFF?text=PVB&font=inter" alt="A profile picture of Priya Vardhan Bezawada">
-                <h1 class="text-4xl font-bold text-neon-pink" style="text-shadow: 0 0 5px var(--neon-pink);">Priya Vardhan Bezawada</h1>
+                <img class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-primary-teal shadow-xl" src="https://placehold.co/128x128/0A1B1A/3A9D9A?text=PVB&font=inter" alt="A profile picture of Priya Vardhan Bezawada">
+                <h1 class="text-4xl font-bold text-accent-copper" style="text-shadow: 0 0 5px var(--accent-copper);">Priya Vardhan Bezawada</h1>
                 <p class="text-gray-400 mt-2 text-lg">AI & Data Science Student | Web Developer | Innovator</p>
                 <p class="max-w-xl mx-auto text-gray-300 mt-4">
                     Curiosity-driven AI & Data Science student passionate about building real-world solutions through AI, web development, and innovation. Skilled communicator and public speaker, blending technical expertise with creativity. Constantly learning, sharing knowledge, and adapting to emerging tech trends to create impactful, user-focused projects that bridge innovation and practicality.
                 </p>
                 <div class="mt-6 flex justify-center gap-4">
-                    <a href="https://drive.google.com/uc?export=download&id=1oEhJT1vK2HjR-Nf4_SPHIUtvr95ya8UQ" class="card flex items-center p-3 px-4 rounded-lg text-white bg-[#B450FF] hover:bg-[#8A2BE2]" aria-label="Download my Resume">
+                    <a href="https://drive.google.com/uc?export=download&id=1oEhJT1vK2HjR-Nf4_SPHIUtvr95ya8UQ" class="card flex items-center p-3 px-4 rounded-lg text-white bg-[#556B2F] hover:bg-[#4D622A]" aria-label="Download my Resume">
                         <i class="fas fa-download mr-2"></i>
                         <span>Download Resume File</span>
                     </a>
@@ -123,20 +123,20 @@
 
             <div class="w-full space-y-12 links-section">
                 <section aria-labelledby="social-heading">
-                    <h2 id="social-heading" class="text-2xl font-semibold mb-4 text-neon-cyan text-center tracking-wider">// SOCIAL NETWORKS //</h2>
+                    <h2 id="social-heading" class="text-2xl font-semibold mb-4 text-primary-teal text-center tracking-wider">// CONNECT PATHWAYS //</h2>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <a href="https://www.linkedin.com/in/dhruvin-sai-sajja-5ba4a6346" target="_blank" class="card flex items-center p-4 rounded-lg w-full" aria-label="View my LinkedIn profile">
-                            <i class="fab fa-linkedin fa-2x w-8 text-center text-neon-cyan"></i>
+                            <i class="fab fa-linkedin fa-2x w-8 text-center text-primary-teal"></i>
                             <span class="ml-4 flex-grow text-lg font-medium">LinkedIn</span>
                             <i class="fas fa-arrow-up-right-from-square text-gray-500"></i>
                         </a>
                         <a href="https://github.com/Dhruvin6677" target="_blank" class="card flex items-center p-4 rounded-lg w-full" aria-label="View my GitHub profile">
-                            <i class="fab fa-github fa-2x w-8 text-center text-neon-pink"></i>
+                            <i class="fab fa-github fa-2x w-8 text-center text-accent-copper"></i>
                             <span class="ml-4 flex-grow text-lg font-medium">GitHub</span>
                             <i class="fas fa-arrow-up-right-from-square text-gray-500"></i>
                         </a>
                         <a href="mailto:dhruvinsaisajja@gmail.com" class="card flex items-center p-4 rounded-lg w-full" aria-label="Send me an email">
-                            <i class="fas fa-envelope fa-2x w-8 text-center text-neon-cyan"></i>
+                            <i class="fas fa-envelope fa-2x w-8 text-center text-primary-teal"></i>
                             <span class="ml-4 flex-grow text-lg font-medium">Email Me</span>
                             <i class="fas fa-arrow-up-right-from-square text-gray-500"></i>
                         </a>
@@ -144,43 +144,43 @@
                 </section>
 
                 <section aria-labelledby="awards-heading">
-                    <h2 id="awards-heading" class="text-2xl font-semibold mb-4 text-[#FFC700] text-center tracking-wider">// RECOGNITION & HACKS //</h2>
+                    <h2 id="awards-heading" class="text-2xl font-semibold mb-4 text-accent-copper text-center tracking-wider">// AWARDS & HONORS //</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                         </div>
                 </section>
 
                 <section aria-labelledby="ideas-heading">
-                    <h2 id="ideas-heading" class="text-2xl font-semibold mb-4 text-neon-pink text-center tracking-wider">// INNOVATION IDEAS //</h2>
+                    <h2 id="ideas-heading" class="text-2xl font-semibold mb-4 text-[#6A8D63] text-center tracking-wider">// NATURE-TECH IDEAS //</h2>
                     <div class="grid grid-cols-1 gap-4">
                         <div class="card p-4 rounded-lg cursor-pointer" onclick="openModal('astroResilienceModal')">
-                           <h3 class="font-bold text-lg text-neon-cyan">🚀 AstroResilience - Space-Tech for Climate Resilience</h3>
+                           <h3 class="font-bold text-lg text-primary-teal">🚀 AstroResilience - Space-Tech for Climate Resilience</h3>
                         </div>
                     </div>
                 </section>
 
                 <section aria-labelledby="projects-heading">
-                    <h2 id="projects-heading" class="text-2xl font-semibold mb-4 text-[#B450FF] text-center tracking-wider">// DIGITAL CONSTRUCTS //</h2>
+                    <h2 id="projects-heading" class="text-2xl font-semibold mb-4 text-primary-teal text-center tracking-wider">// PROJECTS & BUILDS //</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                          <a href="https://github.com/projects6677/ai-buddy.git" target="_blank" class="card p-4 rounded-lg block">
-                            <h3 class="font-bold text-lg text-neon-pink">AI Buddy Project</h3>
+                            <h3 class="font-bold text-lg text-accent-copper">AI Buddy Project</h3>
                             <p class="text-sm text-gray-400 mt-1">A personal AI assistant integrated with WhatsApp.</p>
                         </a>
                         <a href="https://www.linkedin.com/in/dhruvin-sai-sajja-24eu01055/details/projects/" target="_blank" class="card p-4 rounded-lg block">
-                           <h3 class="font-bold text-lg text-neon-pink">Smart Car Parking System</h3>
+                           <h3 class="font-bold text-lg text-accent-copper">Smart Car Parking System</h3>
                            <p class="text-sm text-gray-400 mt-1">An embedded system for real-time parking management.</p>
                         </a>
                     </div>
                 </section>
 
                 <section aria-labelledby="skills-heading">
-                    <h2 id="skills-heading" class="text-2xl font-semibold mb-4 text-[#00FF00] text-center tracking-wider">// DATA CREDENTIALS //</h2>
+                    <h2 id="skills-heading" class="text-2xl font-semibold mb-4 text-[#D9C3A0] text-center tracking-wider">// CERTIFICATION SCROLLS //</h2>
                     <div id="cert-list" class="space-y-4">
                         </div>
                 </section>
             </div>
             
             <footer class="text-center mt-16 mb-4">
-                <p class="text-gray-500 text-sm">// BUILT BY PRIYA VARDHAN BEZAWADA //</p>
+                <p class="text-gray-500 text-sm">// DATAMAP RENDERED BY PRIYA VARDHAN BEZAWADA //</p>
             </footer>
         </div>
     </main>
@@ -189,21 +189,21 @@
         <div id="astroResilienceModal" class="modal hidden" onclick="closeModal('astroResilienceModal')">
             <div class="modal-content idea-modal-content" onclick="event.stopPropagation()">
                 <span class="close-modal" onclick="closeModal('astroResilienceModal')" aria-label="Close project details">&times;</span>
-                <h2 class="text-3xl font-bold mb-4 text-neon-cyan">🚀 AstroResilience – Space-Tech for Climate Resilience 🌍</h2>
+                <h2 class="text-3xl font-bold mb-4 text-primary-teal">🚀 AstroResilience – Space-Tech for Climate Resilience 🌍</h2>
                 
                 <div class="space-y-6 text-gray-300">
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">1️⃣ Problem Statement ❗</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">1️⃣ Problem Statement ❗</h3>
                         <p>Climate change isn’t just coming — it’s here. We face 🔥 Wildfires, 🌊 Floods, 🌾 Droughts, and 🌡 Heatwaves. The real issue is that disaster detection is often <strong>too late</strong>, data is <strong>scattered</strong>, and local communities lack <strong>actionable, real-time insights</strong>. This results in a constant cycle of reacting instead of preventing, costing lives and resources.</p>
                     </div>
                     
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">2️⃣ Vision 👁‍🗨</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">2️⃣ Vision 👁‍🗨</h3>
                         <p>Imagine Earth with its own <strong>nervous system</strong>: Satellites as the 👀 eyes, AI as the 🧠 brain, IoT sensors as the 🕸 nerves, and Communities as the 💪 muscles. AstroResilience envisions a connected planet where we can <strong>Sense</strong> disasters before they strike, <strong>Predict</strong> their impact in minutes, and <strong>Respond</strong> with optimized plans for evacuation, aid, and resource use.</p>
                     </div>
 
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">3️⃣ The Solution 💡</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">3️⃣ The Solution 💡</h3>
                         <ul class="list-disc list-inside space-y-2">
                             <li><strong>🔭 Orbital Edge Layer:</strong> Using CubeSats + LEO/GEO satellites for high-frequency, multi-spectral imaging with onboard AI for instant anomaly detection.</li>
                             <li><strong>☁️ Ground & Cloud Layer:</strong> AI/ML models for disaster prediction, quantum computing for fast evacuation & resource distribution, and cloud microservices for global access.</li>
@@ -212,31 +212,31 @@
                     </div>
 
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">4️⃣ Technical Architecture 🛠</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">4️⃣ Technical Architecture 🛠</h3>
                         <p><strong>Data Flow:</strong> Satellite → Cloud AI → Local IoT Hub → Community App</p>
                         <p class="text-sm"><strong>Tech Stack:</strong> U-Net/YOLOv8/Transformers, AWS/GCP/Azure with Kubernetes, NVIDIA Jetson Xavier at the edge, and IBM Falcon QPUs for optimization.</p>
                     </div>
                     
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">5️⃣ Key Applications 🌟</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">5️⃣ Key Applications 🌟</h3>
                         <p>🌊 Disaster Response, 🌾 Precision Agriculture, 🏙 Urban Planning, and 💧 Water Security.</p>
                     </div>
 
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">6️⃣ Model in Action 🎯</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">6️⃣ Model in Action 🎯</h3>
                         <p>A satellite spots unusual river swelling, onboard AI flags it and alerts ground AI, local IoT sensors confirm the data, a quantum system calculates the best evacuation routes, and communities receive instant alerts in their local language.</p>
                     </div>
 
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">7️⃣ Impact & Scalability 🌱</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">7️⃣ Impact & Scalability 🌱</h3>
                         <p>This system can save thousands of lives, protect billions in agriculture, is deployable anywhere from small islands to mega-cities, and has an open-source core for global collaboration. 🤝</p>
                     </div>
 
                     <div>
-                        <h3 class="font-semibold text-xl text-neon-pink mb-2">8️⃣ The Ask 📢</h3>
+                        <h3 class="font-semibold text-xl text-accent-copper mb-2">8️⃣ The Ask 📢</h3>
                         <p>Looking for 🌐 Partnerships with space agencies & NGOs, 💸 Climate resilience grants, and 👨‍💻 Collaborators in AI, IoT, and satellite tech.</p>
                          <div class="mt-4">
-                            <a href="https://docs.google.com/document/d/1AdDnsS7qWRWx43sxVa-d-SfqD9q9KE93/export?format=pdf" class="card inline-flex items-center p-2 px-3 rounded-lg text-white bg-[#B450FF] hover:bg-[#8A2BE2] text-sm" aria-label="Download the full document" target="_blank">
+                            <a href="https://docs.google.com/document/d/1AdDnsS7qWRWx43sxVa-d-SfqD9q9KE93/export?format=pdf" class="card inline-flex items-center p-2 px-3 rounded-lg text-white bg-[#556B2F] hover:bg-[#4D622A] text-sm" aria-label="Download the full document" target="_blank">
                                 <i class="fas fa-download mr-2"></i>
                                 <span>Download Full Document</span>
                             </a>
@@ -252,7 +252,7 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
 
-            // --- Data Definitions (Same) ---
+            // --- Data Definitions (Unchanged) ---
             const awards = [
                 { id: 'modal1', title: '1st Place - Echoes of Wisdom', prize: 'Prize: ₹2000', imgSrc: 'https://i.postimg.cc/L868dSnr/1741545141651.jpg', alt: 'Echoes of Wisdom Certificate', rotated: false },
                 { id: 'modal2', title: '2nd Place - Prompt to Print', prize: 'Prize: ₹500', imgSrc: 'https://i.postimg.cc/9FBQN0Fd/1741545133982.jpg', alt: 'Prompt to Print Certificate', rotated: false },
@@ -280,6 +280,116 @@
                 awardsContainer.innerHTML += `
                     <div class="card award-card p-4 rounded-lg cursor-pointer" onclick="openModal('${award.id}')">
                         <img src="${award.imgSrc}" alt="${award.alt}" class="rounded-md mb-2 h-40 w-full object-cover">
-                        <p class="font-bold text-lg text-neon-cyan">${award.title}</p>
-                        <p class="text-[#FFC700]">${award.prize}</p>
-                    </div>
+                        <p class="font-bold text-lg text-primary-teal">${award.title}</p>
+                        <p class="text-accent-copper">${award.prize}</p>
+                    </div>`;
+                const awardModalHTML = `
+                    <div id="${award.id}" class="modal hidden" onclick="closeModal('${award.id}')">
+                        <span class="close-modal" onclick="closeModal('${award.id}')" aria-label="Close image viewer">&times;</span>
+                        <img class="modal-content ${award.rotated ? 'rotate-img' : ''}" src="${award.imgSrc}" alt="Full size view of ${award.alt}" onclick="event.stopPropagation()">
+                    </div>`;
+                modalContainer.insertAdjacentHTML('beforeend', awardModalHTML);
+            });
+
+            const certListContainer = document.getElementById('cert-list');
+            certifications.forEach(cert => {
+                certListContainer.innerHTML += `
+                    <a href="${cert.href}" target="_blank" class="card link-card flex items-center p-4 rounded-lg w-full">
+                        <i class="${cert.icon} fa-2x w-8 text-center text-[#D9C3A0]"></i> <span class="ml-4 flex-grow text-lg font-medium">${cert.title}</span>
+                        <i class="fas fa-arrow-up-right-from-square text-gray-500"></i>
+                    </a>`;
+            });
+
+            // --- Landing Page Logic ---
+            const landingPage = document.getElementById('landing-page');
+            const portfolioPage = document.getElementById('portfolio-page');
+            const exploreBtn = document.getElementById('explore-btn');
+            const typingTextElement = document.getElementById('typing-text');
+            const textToType = "Hi, I'm Priya Vardhan Bezawada.";
+            let charIndex = 0;
+
+            function type() {
+                if (charIndex < textToType.length) {
+                    typingTextElement.innerHTML = textToType.substring(0, charIndex + 1) + '<span class="typing-cursor"></span>';
+                    charIndex++;
+                    setTimeout(type, 100);
+                } else {
+                    typingTextElement.innerHTML = textToType; // Remove cursor
+                    gsap.to(exploreBtn, { opacity: 1, duration: 0.5, ease: 'power2.out' });
+                }
+            }
+
+            exploreBtn.addEventListener('click', () => {
+                const tl = gsap.timeline();
+                tl.to(landingPage, { opacity: 0, duration: 0.8, ease: 'power2.inOut' })
+                  .call(() => {
+                      landingPage.style.display = 'none';
+                      portfolioPage.classList.remove('hidden');
+                      document.body.style.overflow = 'auto'; // Allow scrolling
+                  })
+                  .from("header > *", { opacity: 0, y: 30, stagger: 0.15, duration: 0.6, ease: 'power2.out' })
+                  .from(".links-section > section", { opacity: 0, y: 50, stagger: 0.2, duration: 0.8, ease: 'power2.out' }, "-=0.5");
+            });
+            
+            // --- Landing Page Canvas Animation ---
+            const canvas = document.getElementById('landing-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+            let particlesArray;
+
+            class Particle {
+                constructor(x, y, dX, dY, size, color) { this.x = x; this.y = y; this.directionX = dX; this.directionY = dY; this.size = size; this.color = color; }
+                draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false); ctx.fillStyle = this.color; ctx.fill(); }
+                update() {
+                    if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                    if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                    this.x += this.directionX; this.y += this.directionY; this.draw();
+                }
+            }
+
+            function init() {
+                particlesArray = [];
+                let numParticles = (canvas.height * canvas.width) / 9000;
+                for (let i = 0; i < numParticles; i++) {
+                    let size = (Math.random() * 5) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let dX = (Math.random() * .4) - .2; let dY = (Math.random() * .4) - .2;
+                    // Changed particle color to match the Primary Teal theme (3A9D9A)
+                    particlesArray.push(new Particle(x, y, dX, dY, size, 'rgba(58, 157, 154, 0.5)')); 
+                }
+            }
+
+            function animate() { requestAnimationFrame(animate); ctx.clearRect(0,0,innerWidth, innerHeight); particlesArray.forEach(p => p.update()); }
+            window.addEventListener('resize', () => { canvas.width = innerWidth; canvas.height = innerHeight; init(); });
+
+            // Start animations
+            init(); animate(); type();
+        });
+
+        // --- Global Modal Logic ---
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            setTimeout(() => modal.classList.add('active'), 10);
+        }
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            if (!modal) return;
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+            setTimeout(() => modal.classList.add('hidden'), 300);
+        }
+        window.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    closeModal(modal.id);
+                });
+            }
+        });
+    </script>
+</body>
+</html>
